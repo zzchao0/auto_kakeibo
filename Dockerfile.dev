@@ -1,0 +1,17 @@
+FROM ruby:4.0.7-slim-bookworm
+
+WORKDIR /app
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+  build-essential \
+  git \
+  pkg-config \
+  libyaml-dev \
+  libsqlite3-dev \
+  sqlite3 \
+  && rm -rf /var/lib/apt/lists/*
+
+COPY Gemfile Gemfile.lock ./
+
+RUN bundle install
