@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      expense: 支出
+    attributes:
+      expense:
+        used_on: 利用日
+        merchant_name: 利用先
+        amount: 金額
+        category: カテゴリ
+        memo: メモ

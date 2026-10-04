@@ -1,0 +1,29 @@
+<h1>支出一覧</h1>
+
+<%= link_to "新規登録", new_expense_path %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>利用日</th>
+      <th>利用先</th>
+      <th>金額</th>
+      <th>カテゴリ</th>
+      <th>メモ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @expenses.each do |expense| %>
+      <tr>
+        <td><%= expense.used_on %></td>
+        <td><%= expense.merchant_name %></td>
+        <td><%= expense.amount %></td>
+        <td><%= expense.category %></td>
+        <td><%= expense.memo %></td>
+        <td><%= link_to "詳細", expense_path(expense) %></td>
+        <td><%= link_to "編集", edit_expense_path(expense) %></td>
+        <td><%= button_to "削除", expense_path(expense), method: :delete, data:{ turbo_confirm: "削除しますか？" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,29 @@
+<h1>詳細ページ</h1>
+
+  <div>
+    <strong>利用日</strong>
+    <%= @expense.used_on %>
+  </div>
+
+  <div>
+    <strong>利用先</strong>
+    <%= @expense.merchant_name %>
+  </div>
+
+  <div>
+    <strong>金額</strong>
+    <%= @expense.amount %>
+  </div>
+
+  <div>
+    <strong>カテゴリ</strong>
+    <%= @expense.category %>
+  </div>
+
+  <div>
+    <strong>メモ</strong>
+    <%= @expense.memo %>
+  </div>
+
+<%= link_to "一覧ページ", expenses_path%>
+<%= link_to "編集", edit_expense_path(@expense) %>

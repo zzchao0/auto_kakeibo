@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  used_on: 2026-10-03
+  merchant_name: MyString
+  amount: 1
+  category: MyString
+  memo: MyText
+
+two:
+  used_on: 2026-10-03
+  merchant_name: MyString
+  amount: 1
+  category: MyString
+  memo: MyText
