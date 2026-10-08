@@ -1,6 +1,7 @@
 <h1>支出一覧</h1>
 
 <%= link_to "新規登録", new_expense_path %>
+<%= link_to "メール文取り込み", new_email_import_path %>
 
 <table class="table">
   <thead>
@@ -14,7 +15,7 @@
   </thead>
   <tbody>
     <% @expenses.each do |expense| %>
-      <tr>
+      <tr id="<%= dom_id expense %>">
         <td><%= expense.used_on %></td>
         <td><%= expense.merchant_name %></td>
         <td><%= expense.amount %></td>

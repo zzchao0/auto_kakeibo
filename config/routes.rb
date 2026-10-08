@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :expenses
+  resources :email_imports, only: [ :new, :create ]
 end

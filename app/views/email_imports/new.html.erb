@@ -1,0 +1,19 @@
+<h1>メール文取り込み</h1>
+
+<%= link_to "一覧ページ", expenses_path%>
+
+<% if @error_msg.present? %>
+  <div style="color: red;">
+    <ul>
+      <li><%= @error_msg %></li>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with(url: email_imports_path, local: true) do |form| %>
+  <div>
+    <%= form.label :mail_text, "メール文" %>
+    <%= form.text_area :mail_text, value: @mail_text %>
+  </div>
+<%= form.submit %>
+<% end %>
