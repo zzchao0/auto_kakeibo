@@ -14,4 +14,6 @@ Rails.application.routes.draw do
 
   resources :expenses
   resources :email_imports, only: [ :new, :create ]
+  resources :gmail_auth, only: [ :create ]
+  get "gmail_auth/callback", to: "gmail_auth#callback"
 end

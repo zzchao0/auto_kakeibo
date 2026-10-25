@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_10_03_082759) do
+ActiveRecord::Schema[8.1].define(version: 2026_10_08_095607) do
   create_table "expenses", force: :cascade do |t|
     t.date "used_on"
     t.string "merchant_name"
     t.integer "amount"
     t.string "category"
     t.text "memo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "gmail_credentials", force: :cascade do |t|
+    t.text "refresh_token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

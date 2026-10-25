@@ -2,6 +2,7 @@
 
 <%= link_to "新規登録", new_expense_path %>
 <%= link_to "メール文取り込み", new_email_import_path %>
+<%= button_to "Googleに接続", gmail_auth_index_path, form: { data: { turbo: false } } %>
 
 <table class="table">
   <thead>
