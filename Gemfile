@@ -62,6 +62,6 @@ end
 gem "rails-i18n", "~> 8.1.0"
 
 gem "googleauth", "~> 1.17"
-gem "google-apis-gmail_v1", "~> 0.53.0"
+gem "google-apis-gmail_v1", "~> 0.54.0"
 
 gem "minitest-mock", "~> 5.27", group: :test
